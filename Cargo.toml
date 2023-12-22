@@ -1,0 +1,22 @@
+[package]
+name = "sob"
+version = "0.0.1"
+authors = ["tomokao"]
+edition = "2021"
+description = "Serializable Owned/Borrow. `Cow`-like type with no `Clone` requirement, implements Serialize and Deserialize"
+repository = "https://github.com/tomokao/sob"
+license = "WTFPL"
+keywords = ["cow", "serde"]
+categories = ["data-structures", "rust-patterns"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default = ["serde"]
+
+[dependencies]
+serde = { version = "1.0.193", optional = true }
+
+[dev-dependencies]
+serde = { version = "1.0.193", features = ["derive"] }
+serde_json = "1.0.108"
